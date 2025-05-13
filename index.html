@@ -1,54 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amirrul Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amirrul Mukminin | Digital Services</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+    @font-face {
+      font-family: 'Tek Tall Arabic';
+      src: url('https://fonts.cdnfonts.com/s/18332/TekTallArabic.woff') format('woff');
+    }
+
+    :root {
+      --light-bg: #fdfbf5;
+      --dark-bg: #0e1628;
+      --light-text: #1a1a1a;
+      --dark-text: #fdfdfd;
+      --highlight-color: #5f5fff;
+    }
+
     body {
       margin: 0;
-      background-color: #ffffff;
-      transition: background-color 0.3s ease;
-    }
-    .container {
-      height: 100vh;
-      width: 100vw;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--light-text);
       display: flex;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
-      background-color: #ffffff;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      transition: background-color 0.5s, color 0.5s;
+      text-align: left;
+      padding: 40px;
+      gap: 40px;
     }
-    img {
-      max-width: 100%;
+
+    body.dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    .image-container {
+      animation: fadeSlideIn 1.4s ease-out forwards;
+    }
+
+    .text-container {
+      max-width: 500px;
+      animation: fadeSlideInSmooth 1.4s ease-out forwards;
+    }
+
+    h1 {
+      font-family: 'Tek Tall Arabic', sans-serif;
+      font-size: 4rem;
+      margin: 0;
+      color: var(--highlight-color);
+      letter-spacing: 0.08rem;
+      animation: fadeSlideInSmooth 1.5s ease-out forwards;
+    }
+
+    p.description {
+      font-size: 1rem;
+      margin: 20px 0 0;
+      animation: fadeSlideInSmooth 1.6s ease-out forwards;
+    }
+
+    img.main-photo {
+      width: 250px;
       height: auto;
     }
+
     .mode-toggle {
+      font-size: 1.5rem;
+      border: none;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
       position: absolute;
       top: 20px;
       right: 20px;
-      padding: 10px 20px;
-      background-color: #000000;
-      color: #ffffff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .mode-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeSlideInSmooth {
+      0% { opacity: 0; transform: translateY(30px); }
+      60% { opacity: 0.7; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img id="mainPhoto" src="Main%20Photo.png" alt="Amirrul Portfolio Photo">
+  <div class="image-container">
+    <img src="Main Photo 1.png" alt="Amirrul Mukminin" class="main-photo" />
   </div>
-  <button class="mode-toggle" onclick="toggleMode()">Switch Mode</button>
+  <div class="text-container">
+    <h1>AMIRRUL MUKMININ</h1>
+    <p class="description">HTML/CSS Web Development | Typing Services | Canva Design | Data Entry & PDF Conversion</p>
+  </div>
+  <button class="mode-toggle" onclick="toggleMode()" id="modeButton">🌙</button>
 
   <script>
-    let isDarkMode = false;
-
     function toggleMode() {
-      isDarkMode = !isDarkMode;
-      document.body.style.backgroundColor = isDarkMode ? '#1d1d1f' : '#ffffff';
-      document.getElementById('mainPhoto').src = isDarkMode ? 'Main%20Photo%202.png' : 'Main%20Photo.png';
+      const body = document.body;
+      const button = document.getElementById('modeButton');
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      button.textContent = isDark ? '☀️' : '🌙';
     }
   </script>
 </body>
