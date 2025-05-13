@@ -50,7 +50,7 @@
     }
     header {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 30px 20px 0;
     }
     header h1 {
       font-size: 42px;
@@ -132,7 +132,7 @@
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 30px auto 10px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -145,7 +145,6 @@
   <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
 
   <header>
-    <p>Owner of this website</p>
     <img src="Main Photo.png" alt="Amirul Mukminin" class="hero-image" id="heroImage">
   </header>
 
@@ -203,6 +202,7 @@
       const isDark = body.classList.contains('dark-mode');
       button.innerHTML = isDark ? '☀️' : '🌙';
       image.src = isDark ? 'Main Photo 2.png' : 'Main Photo.png';
+      document.querySelector('.underline').style.backgroundColor = isDark ? '#ffffff' : '#1d1d1f';
     }
   </script>
 </body>
