@@ -28,30 +28,36 @@
       color: var(--text-color);
       transition: all 0.3s ease;
     }
+
     .navbar {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 40px;
+      align-items: flex-start;
+      padding: 60px;
       background-color: var(--bg-color);
-      text-align: center;
     }
-    .navbar h1 {
-      font-size: 28px;
-      font-weight: bold;
+
+    .brand-name {
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-color);
     }
-    .navbar p {
-      font-size: 16px;
-      color: #666;
-      margin-top: 5px;
+
+    .brand-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 4px 0 0;
+      color: var(--text-color);
     }
+
     .underline {
       height: 3px;
       background-color: var(--border-color);
       width: 100%;
       transition: background-color 0.3s ease;
     }
+
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -71,13 +77,16 @@
       transition: all 0.3s ease;
       z-index: 1000;
     }
+
     .theme-toggle:hover {
       transform: scale(1.15);
     }
+
     header {
       text-align: center;
       padding: 30px 20px 0;
     }
+
     .hero-wrapper {
       max-width: 100%;
       display: flex;
@@ -85,6 +94,7 @@
       align-items: center;
       margin-bottom: 0;
     }
+
     .hero-image {
       width: 100%;
       max-width: 600px;
@@ -93,21 +103,25 @@
       margin: 0 auto;
       object-fit: contain;
     }
+
     .section {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
       border-bottom: 1px solid #ccc;
     }
+
     .section h2 {
       font-size: 26px;
       margin-bottom: 20px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
+
     .grid-item {
       background-color: var(--card-bg);
       border-radius: 12px;
@@ -115,21 +129,26 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .grid-item:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
+
     .grid-item h3 {
       color: var(--text-color);
       margin-bottom: 10px;
     }
+
     a {
       color: #007aff;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -140,15 +159,16 @@
 </head>
 <body>
   <div class="navbar">
-    <h1>Amirul Mukminin</h1>
-    <p>My Personal Website</p>
+    <h1 class="brand-name">Amirrul Mukminin</h1>
+    <p class="brand-subtitle">My Personal Website</p>
   </div>
+
   <div class="underline"></div>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
 
   <header>
     <div class="hero-wrapper">
-      <img src="Main Photo.png" alt="Amirul Mukminin" class="hero-image" id="heroImage">
+      <img src="Main Photo.png" alt="Amirrul Mukminin" class="hero-image" id="heroImage">
     </div>
   </header>
 
@@ -165,7 +185,7 @@
         <p>Excel, Google Sheets, and form conversion.</p>
       </div>
       <div class="grid-item">
-        <h3>✋ Typing</h3>
+        <h3>🖋️ Typing</h3>
         <p>Fast typing (50+ WPM), accurate & clean documents.</p>
       </div>
       <div class="grid-item">
