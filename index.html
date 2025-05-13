@@ -28,7 +28,7 @@
     }
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 40px 20px 10px;
       position: relative;
     }
     header h1 {
@@ -69,6 +69,13 @@
       margin: auto;
       padding: 40px 20px;
       border-bottom: 1px solid #ccc;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     .section h2 {
       font-size: 26px;
@@ -107,17 +114,11 @@
       font-size: 14px;
       color: #86868b;
     }
-    iframe, video {
-      display: block;
-      margin: 30px auto;
-      max-width: 90%;
-      border-radius: 10px;
-    }
     .image-container {
       position: relative;
       width: 100%;
       max-width: 900px;
-      margin: 30px auto;
+      margin: 10px auto 0;
       overflow: hidden;
       border-radius: 12px;
       animation: fadeIn 1.2s ease-in;
@@ -156,14 +157,10 @@
     <p></p>
   </header>
 
-  <!-- Display image with animation, zoom and overlay text -->
   <div class="image-container">
     <img src="Main%20Photo.png" alt="Amirrul Mukminin">
     <div class="overlay-text">Amirrul Mukminin</div>
   </div>
-
-  <!-- YouTube audio-only embed -->
-  <iframe width="0" height="0" src="https://www.youtube.com/embed/ia2Ph61bYzc?autoplay=1&mute=0&loop=1&playlist=ia2Ph61bYzc" frameborder="0" allow="autoplay"></iframe>
 
   <section class="section">
     <h2>About Me</h2>
@@ -218,6 +215,21 @@
       const isDark = body.classList.contains('dark-mode');
       button.innerHTML = isDark ? '☀️' : '🌙';
     }
+
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
   </script>
 
 </body>
