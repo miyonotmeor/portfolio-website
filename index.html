@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amirrul Mukminin | Digital Services</title>
   <style>
     :root {
@@ -48,21 +48,6 @@
       width: 100%;
       transition: background-color 0.3s ease;
     }
-    header {
-      text-align: center;
-      padding: 30px 20px 0;
-    }
-    header h1 {
-      font-size: 42px;
-      font-weight: 700;
-      margin: 0 0 10px;
-    }
-    header p {
-      font-size: 18px;
-      color: #86868b;
-      margin-top: 0;
-      min-height: 28px;
-    }
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -84,6 +69,25 @@
     }
     .theme-toggle:hover {
       transform: scale(1.15);
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px 0;
+    }
+    .hero-wrapper {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
     }
     .section {
       max-width: 900px;
@@ -128,12 +132,6 @@
       font-size: 14px;
       color: #86868b;
     }
-    img.hero-image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
   </style>
 </head>
 <body>
@@ -145,7 +143,9 @@
   <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
 
   <header>
-    <img src="Main Photo.png" alt="Amirul Mukminin" class="hero-image" id="heroImage">
+    <div class="hero-wrapper">
+      <img src="Main Photo.png" alt="Amirul Mukminin" class="hero-image" id="heroImage">
+    </div>
   </header>
 
   <section class="section">
