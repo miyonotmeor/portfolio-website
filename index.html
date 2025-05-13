@@ -11,6 +11,7 @@
       --card-bg: #ffffff;
       --button-bg: #ffffff;
       --button-text: #1d1d1f;
+      --border-color: #1d1d1f;
     }
     body.dark-mode {
       --bg-color: #1d1d1f;
@@ -18,28 +19,49 @@
       --card-bg: #2c2c2e;
       --button-bg: #2c2c2e;
       --button-text: #f5f5f7;
+      --border-color: #ffffff;
     }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      transition: background-color 0.5s ease, color 0.5s ease;
+      transition: all 0.3s ease;
     }
-    .hero-bar {
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 40px 80px 20px;
+      padding: 20px 40px;
       background-color: var(--bg-color);
-      color: var(--text-color);
-      font-size: 32px;
-      font-weight: 600;
-      border-bottom: 6px solid #1c1c1c;
     }
-    .hero-bar span:last-child {
+    .navbar h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .navbar p {
       font-size: 18px;
-      font-weight: 500;
+    }
+    .underline {
+      height: 3px;
+      background-color: var(--border-color);
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+    header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+    header p {
+      font-size: 18px;
+      color: #86868b;
+      margin-top: 0;
+      min-height: 28px;
     }
     .theme-toggle {
       position: fixed;
@@ -68,13 +90,6 @@
       margin: auto;
       padding: 40px 20px;
       border-bottom: 1px solid #ccc;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
     .section h2 {
       font-size: 26px;
@@ -113,53 +128,26 @@
       font-size: 14px;
       color: #86868b;
     }
-    .image-container {
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto 20px;
-      overflow: hidden;
-      border-radius: 12px;
-      animation: fadeIn 1.2s ease-in;
-    }
-    .image-container img {
-      width: 100%;
+    img.hero-image {
+      max-width: 100%;
       height: auto;
-      transition: transform 0.5s ease;
-    }
-    .image-container:hover img {
-      transform: scale(1.05);
-    }
-    .overlay-text {
-      position: absolute;
-      bottom: 15px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      display: block;
+      margin: 30px auto 10px;
     }
   </style>
 </head>
 <body>
-
+  <div class="navbar">
+    <h1>Amirul Mukminin</h1>
+    <p>My Personal Website</p>
+  </div>
+  <div class="underline"></div>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
 
-  <div class="hero-bar">
-    <span>Amirul Mukminin</span>
-    <span>My Personal Website</span>
-  </div>
-
-  <div class="image-container">
-    <img id="mainImage" src="Main Photo.png" alt="Amirrul Mukminin">
-    <div class="overlay-text">Amirrul Mukminin</div>
-  </div>
+  <header>
+    <p>Owner of this website</p>
+    <img src="Main Photo.png" alt="Amirul Mukminin" class="hero-image" id="heroImage">
+  </header>
 
   <section class="section">
     <h2>About Me</h2>
@@ -210,28 +198,12 @@
     function toggleTheme() {
       const body = document.body;
       const button = document.getElementById('themeButton');
-      const image = document.getElementById('mainImage');
+      const image = document.getElementById('heroImage');
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
       button.innerHTML = isDark ? '☀️' : '🌙';
       image.src = isDark ? 'Main Photo 2.png' : 'Main Photo.png';
     }
-
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
   </script>
-
 </body>
 </html>
