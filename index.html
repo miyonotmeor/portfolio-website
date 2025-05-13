@@ -29,26 +29,59 @@
       transition: all 0.3s ease;
     }
 
-    .navbar {
+    .topbar {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 40px 20px;
-      background-color: var(--bg-color);
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--card-bg);
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    .topbar-left {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .topbar-center input {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .topbar-right button, .topbar-right img {
+      background-color: var(--button-bg);
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .topbar-right button:hover, .topbar-right img:hover {
+      transform: scale(1.1);
+    }
+    .topbar-right img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
     }
 
-    .brand-name {
-      font-size: 3.2vw;
-      font-weight: 700;
-      margin: 0;
-      color: var(--text-color);
+    .theme-toggle {
+      font-size: 18px;
     }
 
-    .brand-subtitle {
-      font-size: 1.5vw;
-      font-weight: 400;
-      margin: 8px 0 0;
-      color: var(--text-color);
+    .navbar {
+      display: none;
     }
 
     .underline {
@@ -56,30 +89,6 @@
       background-color: var(--border-color);
       width: 100%;
       transition: background-color 0.3s ease;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: var(--button-bg);
-      border: none;
-      font-size: 22px;
-      cursor: pointer;
-      color: var(--button-text);
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-
-    .theme-toggle:hover {
-      transform: scale(1.15);
     }
 
     header {
@@ -155,25 +164,23 @@
       font-size: 14px;
       color: #86868b;
     }
-
-    @media (max-width: 768px) {
-      .brand-name {
-        font-size: 6vw;
-      }
-      .brand-subtitle {
-        font-size: 3.8vw;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <h1 class="brand-name">Amirrul Mukminin</h1>
-    <p class="brand-subtitle">My Personal Website</p>
+  <div class="topbar">
+    <div class="topbar-left">📺 Amirrul Mukminin</div>
+    <div class="topbar-center">
+      <input type="text" placeholder="Search..." />
+    </div>
+    <div class="topbar-right">
+      <button onclick="alert('Chat opened!')">💬 Chat</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
+      <button onclick="alert('Notifications')">🔔</button>
+      <img src="Main Photo.png" alt="Profile" />
+    </div>
   </div>
 
   <div class="underline"></div>
-  <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
 
   <header>
     <div class="hero-wrapper">
@@ -230,12 +237,9 @@
     function toggleTheme() {
       const body = document.body;
       const button = document.getElementById('themeButton');
-      const image = document.getElementById('heroImage');
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
       button.innerHTML = isDark ? '☀️' : '🌙';
-      image.src = isDark ? 'Main Photo 2.png' : 'Main Photo.png';
-      document.querySelector('.underline').style.backgroundColor = isDark ? '#ffffff' : '#1d1d1f';
     }
   </script>
 </body>
