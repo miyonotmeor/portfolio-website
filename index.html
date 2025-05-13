@@ -28,19 +28,13 @@
     }
     header {
       text-align: center;
-      padding: 80px 20px 0;
+      padding: 100px 20px 10px;
       position: relative;
     }
     header h1 {
       font-size: 42px;
       font-weight: 700;
-      margin: 0;
-    }
-    header p {
-      font-size: 18px;
-      color: #86868b;
-      margin-top: 0;
-      min-height: 28px;
+      margin: 0 0 10px;
     }
     .theme-toggle {
       position: fixed;
@@ -118,7 +112,7 @@
       position: relative;
       width: 100%;
       max-width: 900px;
-      margin: 10px auto 0;
+      margin: 0 auto 20px;
       overflow: hidden;
       border-radius: 12px;
       animation: fadeIn 1.2s ease-in;
@@ -157,7 +151,7 @@
   </header>
 
   <div class="image-container">
-    <img src="Main%20Photo.png" alt="Amirrul Mukminin">
+    <img id="mainImage" src="Main Photo.png" alt="Amirrul Mukminin">
     <div class="overlay-text">Amirrul Mukminin</div>
   </div>
 
@@ -210,9 +204,11 @@
     function toggleTheme() {
       const body = document.body;
       const button = document.getElementById('themeButton');
+      const image = document.getElementById('mainImage');
       body.classList.toggle('dark-mode');
       const isDark = body.classList.contains('dark-mode');
       button.innerHTML = isDark ? '☀️' : '🌙';
+      image.src = isDark ? 'Main Photo 2.png' : 'Main Photo.png';
     }
 
     const sections = document.querySelectorAll('.section');
