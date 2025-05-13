@@ -42,7 +42,7 @@
       margin-top: 0;
     }
     .theme-toggle {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
       background-color: var(--button-bg);
@@ -51,16 +51,17 @@
       cursor: pointer;
       color: var(--button-text);
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       transition: all 0.3s ease;
+      z-index: 1000;
     }
     .theme-toggle:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
     .section {
       max-width: 900px;
@@ -174,7 +175,8 @@
       const body = document.body;
       const button = document.getElementById('themeButton');
       body.classList.toggle('dark-mode');
-      button.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+      const isDark = body.classList.contains('dark-mode');
+      button.innerHTML = isDark ? '☀️' : '🌙';
     }
   </script>
 
