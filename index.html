@@ -1,245 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amirrul Mukminin | Digital Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amirrul Portfolio</title>
   <style>
-    :root {
-      --bg-color: #f5f5f7;
-      --text-color: #1d1d1f;
-      --card-bg: #ffffff;
-      --button-bg: #ffffff;
-      --button-text: #1d1d1f;
-      --border-color: #1d1d1f;
-    }
-    body.dark-mode {
-      --bg-color: #1d1d1f;
-      --text-color: #f5f5f7;
-      --card-bg: #2c2c2e;
-      --button-bg: #2c2c2e;
-      --button-text: #f5f5f7;
-      --border-color: #ffffff;
-    }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: var(--card-bg);
-      padding: 10px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1001;
-    }
-    .topbar-left {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .topbar-center input {
-      padding: 8px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      width: 200px;
-    }
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .topbar-right button, .topbar-right img {
-      background-color: var(--button-bg);
-      border: none;
-      padding: 6px 12px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .topbar-right button:hover, .topbar-right img:hover {
-      transform: scale(1.1);
-    }
-    .topbar-right img {
-      width: 32px;
-      height: 32px;
-      object-fit: cover;
-    }
-
-    .theme-toggle {
-      font-size: 18px;
-    }
-
-    .navbar {
-      display: none;
-    }
-
-    .underline {
-      height: 3px;
-      background-color: var(--border-color);
-      width: 100%;
+      background-color: #ffffff;
       transition: background-color 0.3s ease;
     }
-
-    header {
-      text-align: center;
-      padding: 30px 20px 0;
-    }
-
-    .hero-wrapper {
-      max-width: 100%;
+    .container {
+      height: 100vh;
+      width: 100vw;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 0;
+      background-color: #ffffff;
     }
-
-    .hero-image {
-      width: 100%;
-      max-width: 600px;
+    img {
+      max-width: 100%;
       height: auto;
-      display: block;
-      margin: 0 auto;
-      object-fit: contain;
     }
-
-    .section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .grid-item {
-      background-color: var(--card-bg);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .grid-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .grid-item h3 {
-      color: var(--text-color);
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #007aff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      color: #86868b;
+    .mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="topbar-left">📺 Amirrul Mukminin</div>
-    <div class="topbar-center">
-      <input type="text" placeholder="Search..." />
-    </div>
-    <div class="topbar-right">
-      <button onclick="alert('Chat opened!')">💬 Chat</button>
-      <button class="theme-toggle" onclick="toggleTheme()" id="themeButton">🌙</button>
-      <button onclick="alert('Notifications')">🔔</button>
-      <img src="Main Photo.png" alt="Profile" />
-    </div>
+  <div class="container">
+    <img id="mainPhoto" src="Main%20Photo.png" alt="Amirrul Portfolio Photo">
   </div>
-
-  <div class="underline"></div>
-
-  <header>
-    <div class="hero-wrapper">
-      <img src="Main Photo.png" alt="Amirrul Mukminin" class="hero-image" id="heroImage">
-    </div>
-  </header>
-
-  <section class="section">
-    <h2>About Me</h2>
-    <p>I’m a Computer Science student from UiTM who provides efficient digital services like data entry, web design, and typing. I’m dedicated, fast, and quality-focused in every task.</p>
-  </section>
-
-  <section class="section">
-    <h2>My Services</h2>
-    <div class="grid">
-      <div class="grid-item">
-        <h3>📊 Data Entry</h3>
-        <p>Excel, Google Sheets, and form conversion.</p>
-      </div>
-      <div class="grid-item">
-        <h3>🖋️ Typing</h3>
-        <p>Fast typing (50+ WPM), accurate & clean documents.</p>
-      </div>
-      <div class="grid-item">
-        <h3>🎨 Canva Design</h3>
-        <p>Posters, Instagram graphics, and clean layouts.</p>
-      </div>
-      <div class="grid-item">
-        <h3>💻 Web Design</h3>
-        <p>HTML & CSS responsive websites for personal use.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Portfolio</h2>
-    <p>Check out my work samples here:
-      <a href="https://drive.google.com/drive/folder/your-link-here" target="_blank">My Portfolio Folder</a>
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Contact</h2>
-    <p>Email: amirrul@example.com</p>
-    <p>Location: Dungun, Terengganu, Malaysia</p>
-  </section>
-
-  <footer>
-    Your satisfaction fuels my commitment!<br>
-    &copy; 2025 Amirrul Mukminin
-  </footer>
+  <button class="mode-toggle" onclick="toggleMode()">Switch Mode</button>
 
   <script>
-    function toggleTheme() {
-      const body = document.body;
-      const button = document.getElementById('themeButton');
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      button.innerHTML = isDark ? '☀️' : '🌙';
+    let isDarkMode = false;
+
+    function toggleMode() {
+      isDarkMode = !isDarkMode;
+      document.body.style.backgroundColor = isDarkMode ? '#1d1d1f' : '#ffffff';
+      document.getElementById('mainPhoto').src = isDarkMode ? 'Main%20Photo%202.png' : 'Main%20Photo.png';
     }
   </script>
 </body>
