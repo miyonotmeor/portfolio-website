@@ -5,35 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amirrul Mukminin | Digital Services</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap');
     @font-face {
       font-family: 'Tek Tall Arabic';
       src: url('https://fonts.cdnfonts.com/s/18332/TekTallArabic.woff') format('woff');
     }
 
     :root {
-      --light-bg: #fdfbf5;
-      --dark-bg: #0e1628;
+      --light-bg: #fef9f2;
+      --dark-bg: #0e1a2b;
       --light-text: #1a1a1a;
       --dark-text: #fdfdfd;
       --highlight-color: #5f5fff;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'SF Pro Display', sans-serif;
       background-color: var(--light-bg);
       color: var(--light-text);
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
       transition: background-color 0.5s, color 0.5s;
-      text-align: left;
-      padding: 40px;
-      gap: 60px;
     }
 
     body.dark-mode {
@@ -41,33 +37,54 @@
       color: var(--dark-text);
     }
 
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 80px 40px 40px;
+      min-height: 100vh;
+      gap: 60px;
+    }
+
     .image-container {
-      animation: fadeSlideIn 1.4s ease-out forwards;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .main-photo {
+      width: 520px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .main-photo:hover {
+      transform: scale(1.03);
     }
 
     .text-container {
-      max-width: 550px;
-      animation: fadeSlideInSmooth 1.4s ease-out forwards;
+      flex: 1;
+      text-align: left;
+      animation: fadeIn 2s ease-out forwards;
     }
 
     h1 {
       font-family: 'Tek Tall Arabic', sans-serif;
       font-size: 4rem;
-      margin: 0;
+      margin-bottom: 20px;
       color: var(--highlight-color);
-      letter-spacing: 0.05rem;
-      animation: fadeSlideInSmooth 1.5s ease-out forwards;
+      letter-spacing: 0.01rem;
+      animation: fadeInSmooth 2s ease-out forwards;
     }
 
-    p.description {
-      font-size: 1rem;
-      margin: 20px 0 0;
-      animation: fadeSlideInSmooth 1.6s ease-out forwards;
-    }
-
-    img.main-photo {
-      width: 330px;
-      height: auto;
+    .description {
+      font-size: 1.1rem;
+      max-width: 550px;
+      line-height: 1.6;
+      animation: fadeIn 2.2s ease forwards;
     }
 
     .mode-toggle {
@@ -77,7 +94,7 @@
       border-radius: 50%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
       width: 50px;
@@ -86,28 +103,182 @@
       align-items: center;
       justify-content: center;
       transition: transform 0.2s ease-in-out;
+      z-index: 1000;
     }
 
     .mode-toggle:hover {
       transform: scale(1.1);
     }
 
-    @keyframes fadeSlideInSmooth {
-      0% { opacity: 0; transform: translateY(30px); }
-      60% { opacity: 0.7; transform: translateY(10px); }
+    .info-section {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .info-block {
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .info-block-left {
+      flex: 1;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .info-box {
+      background: #fff;
+      padding: 14px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 0.9rem;
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .info-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark-mode .info-box {
+      background: #1b1b1b;
+      color: #fff;
+    }
+
+    .service-section {
+      padding: 60px 20px 100px;
+      text-align: center;
+    }
+
+    .service-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .service {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
+      width: 280px;
+    }
+
+    .dark-mode .service {
+      background: #1b1b1b;
+      color: #fff;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #999;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInSmooth {
+      0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="image-container">
-    <img src="Main Photo 1.png" alt="Amirrul Mukminin" class="main-photo" />
-  </div>
-  <div class="text-container">
-    <h1>AMIRRUL MUKMININ</h1>
-    <p class="description">HTML/CSS Web Development | Typing Services | Canva Design | Data Entry & PDF Conversion</p>
-  </div>
   <button class="mode-toggle" onclick="toggleMode()" id="modeButton">🌙</button>
+
+  <section class="section">
+    <div class="image-container">
+      <img src="Main Photo 1.png" alt="Amirrul Mukminin" class="main-photo" />
+    </div>
+    <div class="text-container">
+      <h1>AMIRRUL MUKMININ</h1>
+      <p class="description">HTML/CSS Web Development | Typing Services | Canva Design | Data Entry & PDF Conversion</p>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-block">
+      <div class="info-block-left">
+        <h2>About Me</h2>
+        <p>Hi! I'm Amirrul, a freelance web developer from Malaysia 🇲🇾. I enjoy building clean, responsive websites and helping clients with fast, reliable support.</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-block-left">
+        <h2>Education</h2>
+      </div>
+    </div>
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>🎓 Bachelor Degree</h3>
+        <p>Bachelor of Computer Science (Hons.) in Multimedia Computing – UiTM (2022–2025)</p>
+      </div>
+      <div class="info-box">
+        <h3>📘 Matriculation</h3>
+        <p>Pahang Matriculation College – Computer Science (2020–2022)</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-block-left">
+        <h2>My Skills</h2>
+        <p>HTML, CSS, Web Design, Web Development, Data Entry, Typing, Microsoft Word, Microsoft Excel, Canva, Photo Editing, Video Editing, Writing, Python, C++</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section">
+    <h2>What Can I Help You With?</h2>
+    <div class="services">
+      <div class="service">🔧 <strong>HTML/CSS Web Development</strong><br />Building modern, responsive websites using clean HTML & CSS that look great on all screen sizes.</div>
+      <div class="service">⌨️ <strong>Typing Services</strong><br />Accurate and efficient typing at 50+ WPM for retyping, transcription, and form filling projects.</div>
+      <div class="service">🎨 <strong>Canva Design</strong><br />Professional and creative visual content like posters, resumes, and presentations using Canva Pro.</div>
+      <div class="service">📊 <strong>Data Entry</strong><br />Structured entry of data from various sources into Excel/Google Sheets with 100% accuracy and formatting.</div>
+      <div class="service">📑 <strong>PDF Conversion</strong><br />Seamless conversion between PDF and Word/Excel while preserving formatting and layout design.</div>
+    </div>
+  </section>
+
+  <footer>
+    Copyright © 2025 Amirrul Mukminin
+  </footer>
 
   <script>
     function toggleMode() {
