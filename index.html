@@ -113,13 +113,37 @@
       max-width: 90%;
       border-radius: 10px;
     }
-    img.hero {
-      display: block;
-      margin: 30px auto;
+    .image-container {
+      position: relative;
       width: 100%;
       max-width: 900px;
-      height: auto;
+      margin: 30px auto;
+      overflow: hidden;
       border-radius: 12px;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+    .overlay-text {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -132,8 +156,11 @@
     <p></p>
   </header>
 
-  <!-- Display image -->
-  <img src="Main%20Photo.png" alt="Amirrul Mukminin" class="hero">
+  <!-- Display image with animation, zoom and overlay text -->
+  <div class="image-container">
+    <img src="Main%20Photo.png" alt="Amirrul Mukminin">
+    <div class="overlay-text">Amirrul Mukminin</div>
+  </div>
 
   <!-- YouTube audio-only embed -->
   <iframe width="0" height="0" src="https://www.youtube.com/embed/ia2Ph61bYzc?autoplay=1&mute=0&loop=1&playlist=ia2Ph61bYzc" frameborder="0" allow="autoplay"></iframe>
