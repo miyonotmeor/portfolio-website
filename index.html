@@ -113,7 +113,7 @@
         background-color: #ffffff;
         flex-direction: column;
         width: 200px;
-        padding: 1rem;
+        padding: 0.8rem;
         box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       }
 
@@ -150,7 +150,7 @@
     footer {
       margin-top: auto;
       text-align: center;
-      padding: 1rem;
+      padding: 0.6rem;
       background-color: #f5f5f7;
       color: #6e6e73;
       font-size: 0.85rem;
@@ -179,53 +179,51 @@
   </header>
 
   <section class="hero">
-  <div class="hero-text">
-    <h2>Hi! I’m Amirrul,</h2>
-    <p>a web developer & designer specializing in responsive websites that work seamlessly across all devices such as phone, tablet, or desktop. This website is one of my works and serves as my portfolio in Web Design. Feel free to explore!</p>
-    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
-      <button style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Yes, for sure!</button>
-      <button style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Nah, nevermind, I'm good.</button>
+    <div class="hero-text">
+      <h2>Hi! I’m Amirrul,</h2>
+      <p>a web developer & designer specializing in responsive websites that work seamlessly across all devices such as phone, tablet, or desktop. This website is one of my works and serves as my portfolio in Web Design. Feel free to explore!</p>
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+        <button style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Yes, for sure!</button>
+        <button style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Nah, nevermind, I'm good.</button>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="portfolio" style="height: 100vh; display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
-  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">My Previous Works</h2>
-  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin-bottom: 2rem; margin-left: auto; margin-right: auto;">Here are some of the responsive and interactive websites I’ve designed and developed. These reflect my skills in layout, design, and mobile optimization.</p>
+  <section class="portfolio" style="height: 100vh; display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+    <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">My Previous Works</h2>
+    <p style="max-width: 600px; font-size: 1rem; color: #515154; margin-bottom: 2rem; margin-left: auto; margin-right: auto;">Here are some of the responsive and interactive websites I’ve designed and developed. These reflect my skills in layout, design, and mobile optimization.</p>
 
-  <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: 100%; max-width: 960px; margin: 0 auto;">
-  <div class="project-card" style="background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; transition: transform 0.2s ease;">
-    <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-      <div style="position: relative; width: 100%; height: 160px; background-color: #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-  <h3 style="position: absolute; top: 8px; left: 10px; margin: 0; font-size: 1rem; background: rgba(255,255,255,0.85); padding: 4px 8px; border-radius: 6px;">Project Title</h3>
-</div>
-    </a>
-  </div>
-  <div class="project-card" style="background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; transition: transform 0.2s ease;">
+    <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 0.8fr); gap: 1.5rem; width: 100%; max-width: 960px; margin: 0 auto;">
+      <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
   <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-    <div style="position: relative; width: 100%; height: 160px; background-color: #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="position: absolute; top: 8px; left: 10px; margin: 0; font-size: 1rem; background: rgba(255,255,255,0.85); padding: 4px 8px; border-radius: 6px;">Project Title</h3>
+    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
     </div>
   </a>
-    </a>
-  </div>
-  <div class="project-card" style="background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: left; transition: transform 0.2s ease;">
+</div>
+      <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
   <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-    <div style="position: relative; width: 100%; height: 160px; background-color: #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="position: absolute; top: 8px; left: 10px; margin: 0; font-size: 1rem; background: rgba(255,255,255,0.85); padding: 4px 8px; border-radius: 6px;">Project Title</h3>
+    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
     </div>
   </a>
-    </a>
-  </div>
 </div>
-
-  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
-  <button onclick="goBack()" style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Back</button>
-  <a href="#" style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: inline-block; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">View Full Portfolio</a>
+      <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
+  <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
+    </div>
+  </a>
 </div>
-</section>
+    </div>
 
-<footer>
+    <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+      <button onclick="goBack()" style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; border: none; font-weight: 500; font-size: 0.95rem; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Back</button>
+      <a href="#" style="padding: 0.6rem 1.5rem; border-radius: 999px; background-color: #1d1d1f; color: white; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: inline-block; box-shadow: 0 3px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">View Full Portfolio</a>
+    </div>
+  </section>
+
+  <footer>
     Copyright © 2025 Amirrul Mukminin
   </footer>
 
@@ -238,7 +236,7 @@
       const nav = document.getElementById('nav-menu');
       nav.classList.toggle('active');
     }
-      function goBack() {
+    function goBack() {
       document.querySelector('.portfolio').style.display = 'none';
       document.querySelector('.hero').style.display = 'flex';
     }
