@@ -72,6 +72,14 @@
     header h1 {
       font-size: 1.4rem;
       font-weight: 600;
+      line-height: 1.2;
+    }
+
+    header h1 span {
+      display: block;
+      font-size: 0.75rem;
+      color: #6e6e73;
+      margin-top: 0.05rem;
     }
 
     .menu-toggle {
@@ -91,6 +99,8 @@
     nav {
       display: flex;
       gap: 1.2rem;
+      align-items: center;
+      justify-content: center;
     }
 
     nav a {
@@ -148,12 +158,7 @@
     }
 
     footer {
-      margin-top: auto;
-      text-align: center;
-      padding: 0.6rem;
-      background-color: #f5f5f7;
-      color: #6e6e73;
-      font-size: 0.85rem;
+      display: none;
     }
 
     .portfolio-grid {
@@ -190,7 +195,10 @@
   </div>
 
   <header>
-    <h1>@miyonotmeor</h1>
+    <h1>
+      @miyonotmeor
+      <span>Copyright © 2025 Amirrul Mukminin</span>
+    </h1>
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
@@ -249,10 +257,6 @@
     </div>
   </section>
 
-  <footer>
-    Copyright © 2025 Amirrul Mukminin
-  </footer>
-
   <script>
     function fadeBetweenSections(hideSelector, showSelector) {
       const hideEl = document.querySelector(hideSelector);
@@ -268,7 +272,6 @@
         hideEl.style.display = 'none';
         showEl.style.opacity = 1;
         showEl.style.transform = 'scale(1)';
-        
       }, 800);
     }
 
