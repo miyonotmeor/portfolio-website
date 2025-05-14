@@ -147,17 +147,23 @@
       color: #fff;
     }
 
-    .service-section {
+    .service-section,
+    .portfolio-section,
+    .testimonials-section {
       padding: 60px 20px 100px;
       text-align: center;
     }
 
-    .service-section h2 {
+    .service-section h2,
+    .portfolio-section h2,
+    .testimonials-section h2 {
       font-size: 2rem;
       margin-bottom: 30px;
     }
 
-    .services {
+    .services,
+    .projects,
+    .testimonials {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -166,7 +172,9 @@
       margin: 0 auto;
     }
 
-    .service {
+    .service,
+    .project,
+    .testimonial {
       background: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -174,14 +182,19 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       font-size: 1rem;
       width: 280px;
+      text-align: left;
     }
 
-    .dark-mode .service {
+    .dark-mode .service,
+    .dark-mode .project,
+    .dark-mode .testimonial {
       background: #1b1b1b;
       color: #fff;
     }
 
-    .service:hover {
+    .service:hover,
+    .project:hover,
+    .testimonial:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
@@ -252,6 +265,40 @@
       <div class="service">🎨 <strong>Canva Design</strong><br />Professional and creative visual content like posters, resumes, and presentations using Canva Pro.</div>
       <div class="service">📊 <strong>Data Entry</strong><br />Structured entry of data from various sources into Excel/Google Sheets with 100% accuracy and formatting.</div>
       <div class="service">📑 <strong>PDF Conversion</strong><br />Seamless conversion between PDF and Word/Excel while preserving formatting and layout design.</div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <h2>My Work</h2>
+    <div class="projects">
+      <div class="project">
+        <strong>Personal Portfolio Website</strong><br />
+        Built using HTML & CSS. Fully responsive and deployed via GitHub Pages.<br />
+        🔗 <a href="https://miyonotmeor.github.io/portfolio-website/" target="_blank">View Live</a>
+      </div>
+      <div class="project">
+        <strong>Canva Resume Design</strong><br />
+        Designed clean and modern resume templates for job seekers using Canva Pro.
+      </div>
+      <div class="project">
+        <strong>PDF to Excel Data Conversion</strong><br />
+        Manual data entry project involving tabular data from PDFs converted to Excel format.
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <h2>Client Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        ⭐️⭐️⭐️⭐️⭐️<br />“Amirrul delivered the project exactly as described. Fast and reliable!”<br /><em>– Sarah L., Business Owner</em>
+      </div>
+      <div class="testimonial">
+        ⭐️⭐️⭐️⭐️⭐️<br />“Excellent work with my HTML/CSS website. Very clean and professional!”<br /><em>– James K., Startup Founder</em>
+      </div>
+      <div class="testimonial">
+        ⭐️⭐️⭐️⭐️⭐️<br />“Great communication and quick turnaround. Highly recommended!”<br /><em>– Aina Z., Canva Design Client</em>
+      </div>
     </div>
   </section>
 
