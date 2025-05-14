@@ -155,7 +155,17 @@
       color: #6e6e73;
       font-size: 0.85rem;
     }
-      @media (max-width: 768px) {
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
@@ -166,10 +176,15 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    .hero, .portfolio {
+      opacity: 1;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      transform: scale(1);
+    }
   </style>
 </head>
-<body>
-
+<body style="overflow: hidden;">
   <div id="splash">
     <img src="Logo.webp" alt="Splash Logo" />
   </div>
@@ -189,7 +204,7 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="position: absolute; top: 80px; left: 0; width: 100%; height: calc(100vh - 140px); overflow: hidden;">
     <div class="hero-text">
       <h2>Hi! I’m Amirrul,</h2>
       <p>a web developer & designer specializing in responsive websites that work seamlessly across all devices such as phone, tablet, or desktop. This website is one of my works and serves as my portfolio in Web Design. Feel free to explore!</p>
@@ -200,32 +215,32 @@
     </div>
   </section>
 
-  <section class="portfolio" style="height: 100vh; display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <section class="portfolio" style="position: absolute; top: 80px; left: 0; width: 100%; height: calc(100vh - 140px); display: none; flex-direction: column; text-align: center; padding: 2rem; overflow: hidden;">
     <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">My Previous Works</h2>
     <p style="max-width: 600px; font-size: 1rem; color: #515154; margin-bottom: 2rem; margin-left: auto; margin-right: auto;">Here are some of the responsive and interactive websites I’ve designed and developed. These reflect my skills in layout, design, and mobile optimization.</p>
 
-    <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 0.8fr); gap: 1.5rem; width: 100%; max-width: 960px; margin: 0 auto;">
+    <div class="portfolio-grid">
       <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
-  <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
-    </div>
-  </a>
-</div>
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+          <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+            <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
+          </div>
+        </a>
+      </div>
       <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
-  <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
-    </div>
-  </a>
-</div>
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+          <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+            <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
+          </div>
+        </a>
+      </div>
       <div class="project-card" style="background: transparent; padding: 0; border-radius: 0; box-shadow: none; text-align: left; transition: transform 0.2s ease;">
-  <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
-    <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
-      <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
-    </div>
-  </a>
-</div>
+        <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+          <div style="position: relative; width: 100%; height: 140px; background-color: #e0e0e0; border-radius: 6px; overflow: hidden; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)';">
+            <h3 style="position: absolute; top: 6px; left: 8px; margin: 0; font-size: 0.9rem; background: rgba(255,255,255,0.85); padding: 3px 6px; border-radius: 4px;">Project Title</h3>
+          </div>
+        </a>
+      </div>
     </div>
 
     <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
@@ -239,19 +254,36 @@
   </footer>
 
   <script>
+    function fadeBetweenSections(hideSelector, showSelector) {
+      const hideEl = document.querySelector(hideSelector);
+      const showEl = document.querySelector(showSelector);
+      hideEl.style.opacity = 1;
+      showEl.style.display = 'flex';
+      showEl.style.opacity = 0;
+      hideEl.style.transition = 'opacity 1s ease, transform 1s ease';
+      showEl.style.transition = 'opacity 1s ease, transform 1s ease';
+      hideEl.style.opacity = 0;
+      hideEl.style.transform = 'scale(0.96)';
+      setTimeout(() => {
+        hideEl.style.display = 'none';
+        showEl.style.opacity = 1;
+        showEl.style.transform = 'scale(1)';
+        
+      }, 800);
+    }
+
     document.querySelectorAll('button')[0].addEventListener('click', function() {
-      document.querySelector('.hero').style.display = 'none';
-      document.querySelector('.portfolio').style.display = 'flex';
+      fadeBetweenSections('.hero', '.portfolio');
     });
+
     function toggleMenu() {
       const nav = document.getElementById('nav-menu');
       nav.classList.toggle('active');
     }
+
     function goBack() {
-      document.querySelector('.portfolio').style.display = 'none';
-      document.querySelector('.hero').style.display = 'flex';
+      fadeBetweenSections('.portfolio', '.hero');
     }
   </script>
-
 </body>
 </html>
