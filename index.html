@@ -367,13 +367,14 @@
 <style>
 .feedback {
   transition: opacity 0.8s ease, transform 0.8s ease;
+  overflow: visible; /* Ini sangat penting supaya hover tidak kena crop */
 }
 
 .scrolling-wrapper {
-  overflow: hidden;
+  overflow: visible; /* tukar dari hidden ke visible */
   position: relative;
   width: 100%;
-  padding: 3rem 0;
+  padding: 4rem 0; /* tambah lagi ruang atas bawah */
   will-change: transform;
 }
 
@@ -383,7 +384,7 @@
   animation: scroll-loop 90s linear infinite;
   will-change: transform;
   padding: 0 2rem;
-  padding-bottom: 1.5rem; /* tambah ruang bawah untuk shadow hover */
+  padding-bottom: 2rem; /* buffer untuk hover bayang */
 }
 
 .feedback-box {
@@ -391,7 +392,7 @@
   width: 100%;
   max-width: 260px;
   height: 150px;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
@@ -405,15 +406,15 @@
 
 .feedback-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  z-index: 2;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  z-index: 3;
 }
 
 .feedback-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* naikkan kedudukan gambar */
+  object-position: center top;
   display: block;
 }
 
