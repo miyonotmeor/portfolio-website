@@ -337,27 +337,27 @@
   </div>
 </section>
 
-<section class="feedback" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto; opacity: 0; transition: opacity 1s ease, transform 1s ease; transform: scale(0.96);">
+<section class="feedback" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto; opacity: 0; transform: scale(0.96);">
   <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Feedback</h2>
   <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">
     I value feedback from everyone who visits my portfolio. Your thoughts help me grow and improve my work. Feel free to explore the feedback shared below!
   </p>
-  <div style="width: 100%; overflow: hidden; position: relative; height: 160px;">
+  <div style="width: 100%; overflow: hidden; position: relative; height: 180px;">
     <div class="scrolling-track">
       <!-- ULANGI GAMBAR UNTUK LOOP BERTERUSAN -->
       <div class="scrolling-content">
-        <img src="GAMBAR1.jpg" alt="Feedback 1" />
-        <img src="GAMBAR2.jpg" alt="Feedback 2" />
-        <img src="GAMBAR3.jpg" alt="Feedback 3" />
-        <img src="GAMBAR4.jpg" alt="Feedback 4" />
-        <img src="GAMBAR5.jpg" alt="Feedback 5" />
-        <img src="GAMBAR6.jpg" alt="Feedback 6" />
-        <img src="GAMBAR1.jpg" alt="Feedback 1 Duplicate" />
-        <img src="GAMBAR2.jpg" alt="Feedback 2 Duplicate" />
-        <img src="GAMBAR3.jpg" alt="Feedback 3 Duplicate" />
-        <img src="GAMBAR4.jpg" alt="Feedback 4 Duplicate" />
-        <img src="GAMBAR5.jpg" alt="Feedback 5 Duplicate" />
-        <img src="GAMBAR6.jpg" alt="Feedback 6 Duplicate" />
+        <div class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1" /></div>
+        <div class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2" /></div>
+        <div class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3" /></div>
+        <div class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4" /></div>
+        <div class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5" /></div>
+        <div class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6" /></div>
+        <div class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1 Duplicate" /></div>
+        <div class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2 Duplicate" /></div>
+        <div class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3 Duplicate" /></div>
+        <div class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4 Duplicate" /></div>
+        <div class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5 Duplicate" /></div>
+        <div class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6 Duplicate" /></div>
       </div>
     </div>
   </div>
@@ -368,11 +368,15 @@
 </section>
 
 <style>
+.feedback {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
 .scrolling-track {
   display: flex;
   width: 100%;
   overflow: hidden;
-  height: 150px;
+  height: 160px;
 }
 
 .scrolling-content {
@@ -381,11 +385,21 @@
   animation: scroll-loop 30s linear infinite;
 }
 
-.scrolling-content img {
+.feedback-box {
   min-width: 250px;
   height: 150px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-box img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
