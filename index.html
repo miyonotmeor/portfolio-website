@@ -346,18 +346,18 @@
     <div class="scrolling-track">
       <!-- ULANGI GAMBAR UNTUK LOOP BERTERUSAN -->
       <div class="scrolling-content">
-        <div class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1" /></div>
-        <div class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2" /></div>
-        <div class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3" /></div>
-        <div class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4" /></div>
-        <div class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5" /></div>
-        <div class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6" /></div>
-        <div class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1 Duplicate" /></div>
-        <div class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2 Duplicate" /></div>
-        <div class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3 Duplicate" /></div>
-        <div class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4 Duplicate" /></div>
-        <div class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5 Duplicate" /></div>
-        <div class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6 Duplicate" /></div>
+        <a href="LINK1" target="_blank" class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1" /></a>
+        <a href="LINK2" target="_blank" class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2" /></a>
+        <a href="LINK3" target="_blank" class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3" /></a>
+        <a href="LINK4" target="_blank" class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4" /></a>
+        <a href="LINK5" target="_blank" class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5" /></a>
+        <a href="LINK6" target="_blank" class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6" /></a>
+        <a href="LINK1" target="_blank" class="feedback-box"><img src="GAMBAR1.jpg" alt="Feedback 1 Duplicate" /></a>
+        <a href="LINK2" target="_blank" class="feedback-box"><img src="GAMBAR2.jpg" alt="Feedback 2 Duplicate" /></a>
+        <a href="LINK3" target="_blank" class="feedback-box"><img src="GAMBAR3.jpg" alt="Feedback 3 Duplicate" /></a>
+        <a href="LINK4" target="_blank" class="feedback-box"><img src="GAMBAR4.jpg" alt="Feedback 4 Duplicate" /></a>
+        <a href="LINK5" target="_blank" class="feedback-box"><img src="GAMBAR5.jpg" alt="Feedback 5 Duplicate" /></a>
+        <a href="LINK6" target="_blank" class="feedback-box"><img src="GAMBAR6.jpg" alt="Feedback 6 Duplicate" /></a>
       </div>
     </div>
   </div>
@@ -395,12 +395,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .feedback-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 @keyframes scroll-loop {
