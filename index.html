@@ -367,15 +367,15 @@
 <style>
 .feedback {
   transition: opacity 0.8s ease, transform 0.8s ease;
-  overflow: hidden;
+  overflow: visible; /* Penting! Biar efek hover tak terpotong */
   padding: 4rem 2rem;
 }
 
 .scrolling-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow: visible; /* Ini kunci utama */
   position: relative;
-  padding: 2rem 0;
+  padding: 2rem 0 5rem 0; /* Tambah ruang bawah untuk shadow hover */
 }
 
 .scrolling-track {
