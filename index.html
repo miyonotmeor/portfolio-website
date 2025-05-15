@@ -366,32 +366,28 @@
 
 <style>
 .feedback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transition: opacity 0.8s ease, transform 0.8s ease;
-  overflow: hidden; /* pastikan section tak scroll */
+  overflow: hidden;
   padding: 4rem 2rem;
 }
 
 .scrolling-wrapper {
   width: 100%;
-  max-width: 100%;
+  overflow: hidden;
   position: relative;
-  overflow: hidden; /* tiada scroll kiri kanan */
+  padding: 2rem 0;
 }
 
 .scrolling-track {
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap; /* biar auto turun ke bawah jika skrin kecil */
-  padding: 0;
-  margin-top: 1rem;
+  animation: scroll-loop 60s linear infinite;
+  padding: 0 2rem;
 }
 
 .feedback-box {
-  flex: 0 1 260px;
+  flex: 0 0 auto;
+  width: 100%;
   max-width: 260px;
   height: 150px;
   border-radius: 10px;
@@ -420,12 +416,9 @@
   display: block;
 }
 
-/* Optional: Responsif kecil */
-@media (max-width: 768px) {
-  .feedback-box {
-    max-width: 90%;
-    height: 140px;
-  }
+@keyframes scroll-loop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 </style>
 
