@@ -534,18 +534,24 @@
     const hideEl = document.querySelector(hideSelector);
     const showEl = document.querySelector(showSelector);
     if (!hideEl || !showEl) return;
-    hideEl.style.opacity = 1;
-    showEl.style.display = 'flex';
-    showEl.style.opacity = 0;
-    hideEl.style.transition = 'opacity 1s ease, transform 1s ease';
-    showEl.style.transition = 'opacity 1s ease, transform 1s ease';
+
+    hideEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     hideEl.style.opacity = 0;
     hideEl.style.transform = 'scale(0.96)';
+
     setTimeout(() => {
       hideEl.style.display = 'none';
-      showEl.style.opacity = 1;
-      showEl.style.transform = 'scale(1)';
-    }, 800);
+
+      showEl.style.display = 'flex';
+      showEl.style.opacity = 0;
+      showEl.style.transform = 'scale(0.96)';
+
+      requestAnimationFrame(() => {
+        showEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        showEl.style.opacity = 1;
+        showEl.style.transform = 'scale(1)';
+      });
+    }, 500);
   }
 
   function toggleMenu() {
@@ -561,3 +567,4 @@
     fadeBetweenSections('.expertise', '.hero');
   }
 </script>
+
