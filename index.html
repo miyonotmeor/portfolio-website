@@ -342,28 +342,40 @@
   <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">
     I value feedback from everyone who visits my portfolio. Your thoughts help me grow and improve my work. Feel free to explore the feedback shared below!
   </p>
-  <div class="portfolio-grid">
-    <a href="LINK_PROJEK_AWAK" target="_blank" style="text-decoration: none;">
-      <div style="position: relative; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="GAMBAR_AWAK.jpg" alt="Feedback 1" style="width: 100%; height: 100%; object-fit: cover;" />
+  <div style="width: 100%; overflow: hidden; position: relative; height: 160px;">
+    <div style="display: flex; gap: 1rem; animation: scroll-right 30s linear infinite; width: max-content; will-change: transform;">
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR1.jpg" alt="Feedback 1" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
-    </a>
-    <a href="LINK_PROJEK_AWAK" target="_blank" style="text-decoration: none;">
-      <div style="position: relative; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="GAMBAR_AWAK.jpg" alt="Feedback 1" style="width: 100%; height: 100%; object-fit: cover;" />
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR2.jpg" alt="Feedback 2" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
-    </a>
-    <a href="LINK_PROJEK_AWAK" target="_blank" style="text-decoration: none;">
-      <div style="position: relative; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="GAMBAR_AWAK.jpg" alt="Feedback 1" style="width: 100%; height: 100%; object-fit: cover;" />
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR3.jpg" alt="Feedback 3" style="width: 100%; height: 100%; object-fit: cover;" />
       </div>
-    </a>
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR4.jpg" alt="Feedback 4" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR5.jpg" alt="Feedback 5" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+      <div style="min-width: 250px; height: 150px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img src="GAMBAR6.jpg" alt="Feedback 6" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+    </div>
   </div>
   <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
     <button class="button-style" onclick="fadeBetweenSections('.feedback', '.portfolio')">Back</button>
     <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
   </div>
 </section>
+
+<style>
+@keyframes scroll-right {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+</style>
 
 <!-- Data Entry Section -->
 <section class="data-entry" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
