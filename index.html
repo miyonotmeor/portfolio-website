@@ -337,7 +337,7 @@
   </div>
 </section>
 
-<section class="feedback" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+<section class="feedback" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto; opacity: 0; transition: opacity 1s ease, transform 1s ease; transform: scale(0.96);">
   <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Feedback</h2>
   <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">
     I value feedback from everyone who visits my portfolio. Your thoughts help me grow and improve my work. Feel free to explore the feedback shared below!
@@ -372,7 +372,9 @@
 
 <style>
 @keyframes scroll-right {
-  0%   { transform: translateX(-100%); }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
   100% { transform: translateX(100%); }
 }
 </style>
