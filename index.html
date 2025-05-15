@@ -342,23 +342,20 @@
   <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">
     I value feedback from everyone who visits my portfolio. Your thoughts help me grow and improve my work. Feel free to explore the feedback shared below!
   </p>
-  <div style="width: 100%; overflow: visible; position: relative; height: 180px; padding: 0 1.5rem;">
-    <div class="scrolling-track">
-      <!-- ULANGI GAMBAR UNTUK LOOP BERTERUSAN -->
-      <div class="scrolling-content">
-        <a href="LINK1" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%201.png?raw=true" alt="Feedback 1" /></a>
-        <a href="LINK2" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%202.png?raw=true" alt="Feedback 2" /></a>
-        <a href="LINK3" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%203.png?raw=true" alt="Feedback 3" /></a>
-        <a href="LINK4" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%204.png?raw=true" alt="Feedback 4" /></a>
-        <a href="LINK5" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%205.png?raw=true" alt="Feedback 5" /></a>
-        <a href="LINK6" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%206.png?raw=true" alt="Feedback 6" /></a>
-        <a href="LINK1" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%201.png?raw=true" alt="Feedback 1 Duplicate" /></a>
-        <a href="LINK2" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%202.png?raw=true" alt="Feedback 2 Duplicate" /></a>
-        <a href="LINK3" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%203.png?raw=true" alt="Feedback 3 Duplicate" /></a>
-        <a href="LINK4" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%204.png?raw=true" alt="Feedback 4 Duplicate" /></a>
-        <a href="LINK5" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%205.png?raw=true" alt="Feedback 5 Duplicate" /></a>
-        <a href="LINK6" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%206.png?raw=true" alt="Feedback 6 Duplicate" /></a>
-      </div>
+  <div style="width: 100%; position: relative; padding: 0 1.5rem;">
+    <div class="feedback-grid">
+      <a href="LINK1" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%201.png?raw=true" alt="Feedback 1" /></a>
+      <a href="LINK2" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%202.png?raw=true" alt="Feedback 2" /></a>
+      <a href="LINK3" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%203.png?raw=true" alt="Feedback 3" /></a>
+      <a href="LINK4" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%204.png?raw=true" alt="Feedback 4" /></a>
+      <a href="LINK5" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%205.png?raw=true" alt="Feedback 5" /></a>
+      <a href="LINK6" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%206.png?raw=true" alt="Feedback 6" /></a>
+      <a href="LINK1" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%201.png?raw=true" alt="Feedback 1 Duplicate" /></a>
+      <a href="LINK2" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%202.png?raw=true" alt="Feedback 2 Duplicate" /></a>
+      <a href="LINK3" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%203.png?raw=true" alt="Feedback 3 Duplicate" /></a>
+      <a href="LINK4" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%204.png?raw=true" alt="Feedback 4 Duplicate" /></a>
+      <a href="LINK5" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%205.png?raw=true" alt="Feedback 5 Duplicate" /></a>
+      <a href="LINK6" target="_blank" class="feedback-box"><img src="https://github.com/miyonotmeor/portfolio-website/blob/main/Feedback%206.png?raw=true" alt="Feedback 6 Duplicate" /></a>
     </div>
   </div>
   <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
@@ -372,23 +369,15 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.scrolling-track {
-  display: flex;
-  width: 100%;
-  overflow: visible;
-  height: 150px;
-}
-
-.scrolling-content {
-  display: flex;
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  animation: scroll-loop 90s linear infinite;
-  padding: 0 1rem;
-  will-change: transform;
+  justify-content: center;
+  align-items: center;
 }
 
 .feedback-box {
-  min-width: 260px;
   height: 150px;
   border-radius: 8px;
   overflow: hidden;
@@ -412,11 +401,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@keyframes scroll-loop {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
 }
 </style>
 
