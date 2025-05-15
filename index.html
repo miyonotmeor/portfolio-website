@@ -366,30 +366,32 @@
 
 <style>
 .feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: opacity 0.8s ease, transform 0.8s ease;
-  overflow: visible; /* Ini sangat penting supaya hover tidak kena crop */
+  overflow: hidden; /* pastikan section tak scroll */
+  padding: 4rem 2rem;
 }
 
 .scrolling-wrapper {
-  overflow: visible; /* tukar dari hidden ke visible */
-  position: relative;
   width: 100%;
-  padding: 4rem 0; /* tambah lagi ruang atas bawah */
-  will-change: transform;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden; /* tiada scroll kiri kanan */
 }
 
 .scrolling-track {
   display: flex;
   gap: 1.5rem;
-  animation: scroll-loop 90s linear infinite;
-  will-change: transform;
-  padding: 0 2rem;
-  padding-bottom: 2rem; /* buffer untuk hover bayang */
+  justify-content: center;
+  flex-wrap: wrap; /* biar auto turun ke bawah jika skrin kecil */
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .feedback-box {
-  flex: 0 0 auto;
-  width: 100%;
+  flex: 0 1 260px;
   max-width: 260px;
   height: 150px;
   border-radius: 10px;
@@ -418,9 +420,12 @@
   display: block;
 }
 
-@keyframes scroll-loop {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Optional: Responsif kecil */
+@media (max-width: 768px) {
+  .feedback-box {
+    max-width: 90%;
+    height: 140px;
+  }
 }
 </style>
 
