@@ -570,5 +570,18 @@ function fadeBetweenSections(hideSelector, showSelector) {
     });
   }, 500);
 }
+
+function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+  }
+
+  function goBack() {
+    fadeBetweenSections('.portfolio', '.hero');
+  }
+
+  function goBackExpertise() {
+    fadeBetweenSections('.expertise', '.hero');
+  }
 </script>
 
