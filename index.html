@@ -309,14 +309,89 @@
   <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Additional Expertise</h2>
   <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto;">I’m not only skilled in web design. I also offer reliable services in data entry, fast typing, Canva visuals, Telegram bot setups, and document conversions (like PDF). These are part of my everyday tools in helping clients get things done, fast and clean.</p>
   <div class="expertise-buttons">
-    <button class="button-style">Data Entry</button>
-    <button class="button-style">Typing</button>
-    <button class="button-style">Canva Support</button>
-    <button class="button-style">Telegram Bot</button>
-    <button class="button-style">Conversion</button>
-  </div>
+  <button class="button-style" onclick="fadeBetweenSections('.expertise', '.data-entry')">Data Entry</button>
+  <button class="button-style" onclick="fadeBetweenSections('.expertise', '.typing-section')">Typing</button>
+  <button class="button-style" onclick="fadeBetweenSections('.expertise', '.canva-support')">Canva Support</button>
+  <button class="button-style" onclick="fadeBetweenSections('.expertise', '.telegram-bot')">Telegram Bot</button>
+  <button class="button-style" onclick="fadeBetweenSections('.expertise', '.conversion-tasks')">Conversion</button>
+</div>
   <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
     <button class="button-style" onclick="goBackExpertise()">Back</button>
+    <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
+  </div>
+</section>
+
+<!-- Data Entry Section -->
+<section class="data-entry" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Data Entry</h2>
+  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">I provide clean and organized data entry services to help clients manage spreadsheets, databases, and records efficiently. Accuracy, speed, and consistency are always my top priorities in every project I take on.</p>
+  <div class="portfolio-grid">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+    <button class="button-style" onclick="fadeBetweenSections('.data-entry', '.expertise')">Back</button>
+    <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
+  </div>
+</section>
+
+<!-- Typing Section -->
+<section class="typing-section" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Typing</h2>
+  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">From handwritten notes to scanned PDFs, I offer fast and accurate typing services tailored to your formatting needs. Whether it's a few pages or large documents, I deliver neat and editable results with precision.</p>
+  <div class="portfolio-grid">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+    <button class="button-style" onclick="fadeBetweenSections('.typing-section', '.expertise')">Back</button>
+    <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
+  </div>
+</section>
+
+<!-- Canva Support Section -->
+<section class="canva-support" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Canva Support</h2>
+  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">With Canva Pro and strong design sense, I help clients craft visually appealing materials — from social media posts to business documents — aligned with their brand and purpose. Every design is editable and ready to use.</p>
+  <div class="portfolio-grid">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+    <button class="button-style" onclick="fadeBetweenSections('.canva-support', '.expertise')">Back</button>
+    <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
+  </div>
+</section>
+
+<!-- Telegram Bot Section -->
+<section class="telegram-bot" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Telegram Bot</h2>
+  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">I offer setup and customization support for Telegram bots — useful for automation, client interaction, or task management. Whether it's command creation or flow setup, I help make your Telegram work smarter.</p>
+  <div class="portfolio-grid">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+    <button class="button-style" onclick="fadeBetweenSections('.telegram-bot', '.expertise')">Back</button>
+    <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
+  </div>
+</section>
+
+<!-- Conversion Tasks Section -->
+<section class="conversion-tasks" style="display: none; flex-direction: column; text-align: center; padding: 2rem; overflow-y: auto;">
+  <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem;">Conversion (PDF etc.)</h2>
+  <p style="max-width: 600px; font-size: 1rem; color: #515154; margin: 0 auto 2rem auto;">Need to convert images, Word docs, or PDFs quickly and neatly? I deliver accurate file conversions, ensuring formatting is preserved and results are fully usable across platforms or apps.</p>
+  <div class="portfolio-grid">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem;">
+    <button class="button-style" onclick="fadeBetweenSections('.conversion-tasks', '.expertise')">Back</button>
     <a href="https://www.upwork.com/freelancers/~017cc75228354e54a8?viewMode=1" class="view-button" target="_blank">View Full Portfolio</a>
   </div>
 </section>
