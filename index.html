@@ -546,41 +546,29 @@
 </section>
 
 <script>
-  function fadeBetweenSections(hideSelector, showSelector) {
-    const hideEl = document.querySelector(hideSelector);
-    const showEl = document.querySelector(showSelector);
-    if (!hideEl || !showEl) return;
+function fadeBetweenSections(hideSelector, showSelector) {
+  const hideEl = document.querySelector(hideSelector);
+  const showEl = document.querySelector(showSelector);
+  if (!hideEl || !showEl) return;
 
-    hideEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    hideEl.style.opacity = 0;
-    hideEl.style.transform = 'scale(0.96)';
+  hideEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+  hideEl.style.opacity = 0;
+  hideEl.style.transform = 'scale(0.96)';
 
-    setTimeout(() => {
-      hideEl.style.display = 'none';
+  setTimeout(() => {
+    hideEl.style.display = 'none';
 
-      showEl.style.display = 'flex';
-      showEl.style.opacity = 0;
-      showEl.style.transform = 'scale(0.96)';
+    showEl.style.display = 'flex';
+    showEl.style.opacity = 0;
+    showEl.style.transform = 'scale(0.96)';
+    showEl.offsetHeight; // Trigger reflow
 
-      requestAnimationFrame(() => {
-        showEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        showEl.style.opacity = 1;
-        showEl.style.transform = 'scale(1)';
-      });
-    }, 500);
-  }
-
-  function toggleMenu() {
-    const nav = document.getElementById('nav-menu');
-    nav.classList.toggle('active');
-  }
-
-  function goBack() {
-    fadeBetweenSections('.portfolio', '.hero');
-  }
-
-  function goBackExpertise() {
-    fadeBetweenSections('.expertise', '.hero');
-  }
+    requestAnimationFrame(() => {
+      showEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      showEl.style.opacity = 1;
+      showEl.style.transform = 'scale(1)';
+    });
+  }, 500);
+}
 </script>
 
