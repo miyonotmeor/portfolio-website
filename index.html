@@ -366,32 +366,43 @@
 
 <style>
 .feedback {
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  overflow: visible; /* Penting! Biar efek hover tak terpotong */
   padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.feedback h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.feedback p {
+  max-width: 600px;
+  font-size: 1rem;
+  color: #515154;
+  margin: 0 auto 2rem auto;
 }
 
 .scrolling-wrapper {
-  width: 100%;
-  overflow: visible; /* Ini kunci utama */
   position: relative;
-  padding: 2rem 0 5rem 0; /* Tambah ruang bawah untuk shadow hover */
+  overflow: hidden;
+  width: 100%;
+  height: 180px; /* Kawal tinggi supaya tak push page */
 }
 
 .scrolling-track {
   display: flex;
   gap: 1.5rem;
-  animation: scroll-loop 60s linear infinite;
   padding: 0 2rem;
+  animation: scroll-loop 60s linear infinite;
 }
 
 .feedback-box {
   flex: 0 0 auto;
-  width: 100%;
-  max-width: 260px;
+  width: 260px;
   height: 150px;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   display: flex;
@@ -399,13 +410,14 @@
   justify-content: center;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
   position: relative;
 }
 
 .feedback-box:hover {
   transform: scale(1.05);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
-  z-index: 3;
+  z-index: 2;
 }
 
 .feedback-box img {
@@ -414,6 +426,13 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+.feedback-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @keyframes scroll-loop {
