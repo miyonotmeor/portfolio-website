@@ -373,7 +373,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 0 1rem;
+  padding: 2rem 0; /* More vertical space to avoid cropping */
   will-change: transform;
 }
 
@@ -382,6 +382,7 @@
   gap: 1.5rem;
   animation: scroll-loop 90s linear infinite;
   will-change: transform;
+  padding: 0 2rem; /* Add inner padding to prevent edge clipping */
 }
 
 .feedback-box {
@@ -402,8 +403,8 @@
 
 .feedback-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 
 .feedback-box img {
