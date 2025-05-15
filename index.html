@@ -373,7 +373,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 3rem 0; /* Tambah ruang vertical supaya bayang tak terpotong */
+  padding: 3rem 0;
   will-change: transform;
 }
 
@@ -382,7 +382,8 @@
   gap: 1.5rem;
   animation: scroll-loop 90s linear infinite;
   will-change: transform;
-  padding: 0 2rem; /* Tambah padding untuk elak shadow tersepit di tepi */
+  padding: 0 2rem;
+  padding-bottom: 1.5rem; /* tambah ruang bawah untuk shadow hover */
 }
 
 .feedback-box {
@@ -399,6 +400,7 @@
   justify-content: center;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .feedback-box:hover {
@@ -411,6 +413,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top; /* naikkan kedudukan gambar */
   display: block;
 }
 
